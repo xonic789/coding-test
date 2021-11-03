@@ -42,7 +42,7 @@
 
 ## 커밋 컨벤션
 - 1 문제당 1 커밋을 원칙으로 한다.
-- 커밋 제목 : github nickname !: 문제 이름 
+- 커밋 subject : github nickname !: 문제 이름 
   - 예) xonic !: BOJ 12865번 평범한 배낭
 - 커밋 description : 간단한 풀이
   - 예) 해당 문제는 알고리즘을 쓰지 않고 구현.
