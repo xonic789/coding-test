@@ -1,3 +1,4 @@
+package week1;
 
 public class BOJ_12865_평범한배낭 {
 
