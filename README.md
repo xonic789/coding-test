@@ -46,9 +46,9 @@
 - 백준의 경우 `BOJ_{문제번호}_{문제제목}`
 - 프로그래머스의 경우 `PRO_{문제번호}_{문제제목}`
 - 예)
-  ![image](https://user-images.githubusercontent.com/64122884/140012538-301e5b17-3e7f-4486-accc-d000bc56f9b5.png)
+-
+  ![image](https://user-images.githubusercontent.com/64122884/140043847-fa0c9b89-808a-44dc-8de3-bf7fb291cb1b.png)
 
-  
 ## 진행 방법
 - 본인의 이름에 해당하는 디렉토리를 IDE에서 workspace로 잡는다.
 - 소스코드 제외 필요 없는 모든 파일은 ignore 처리한다. (이건 제가 해도 돼요)
