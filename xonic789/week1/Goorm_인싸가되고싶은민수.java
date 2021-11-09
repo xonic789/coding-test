@@ -12,8 +12,8 @@ public class Goorm_인싸가되고싶은민수 {
     // 1. a == b
     // 2. a != b
     String[] input = br.readLine().split(" ");
-    long a = Integer.parseInt(input[0]);
-    long b = Integer.parseInt(input[1]);
+    long a = Long.parseLong(input[0]);
+    long b = Long.parseLong(input[1]);
     long minimumDivisor = 0;
     if (a == b) {
       minimumDivisor = getMinimumDivisor(a);
@@ -36,7 +36,7 @@ public class Goorm_인싸가되고싶은민수 {
   }
 
   public static long getMinimumDivisor(long a) {
-    for (int i = 2; i <= Math.sqrt(a); i++) {
+    for (int i = 2; i < a; i++) {
       // 나누어 떨어질 때
       if (a % i == 0) {
         return i;
