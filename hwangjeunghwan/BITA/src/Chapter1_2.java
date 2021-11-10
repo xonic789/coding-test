@@ -1,33 +1,35 @@
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 class Chapter1_2 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input[] = br.readLine().split(" ");
 		
-		int n = sc.nextInt();
-		int m = sc.nextInt();
+		long n = Long.parseLong(input[0]);
+		long m = Long.parseLong(input[1]);
 		
 		
-		int answer=0;
+		long answer = 0;
+		
 		if(n==m) {
-			int[] count = new int[m +1];
+			answer = longanswer(n);
 			
-			for(int i=2; i*i<m; i++) {
-				if(m % i == 0) {
-					count[i]++;
-				}
-			}
-			int k = count[0];
-			for(int i=0; i<count.length; i++) {
-				if(k<count[i]) {
-					k = count[i];
-					answer = i;
-				}
-			}
 		}
 		else {
-			answer = 2;
+			answer = 2L;
 		}
 		
 		System.out.print(answer);
+	}
+	
+	public static long longanswer(long n) {
+		for(Long i=2L; i*i<=n; i++) {
+			if(n % i == 0) {
+				return i;
+			}
+		}
+		return n;
 	}
 }
