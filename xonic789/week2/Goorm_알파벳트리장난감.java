@@ -8,6 +8,8 @@ import java.util.List;
 
 public class Goorm_알파벳트리장난감 {
   public static List<Integer> answer = new ArrayList<>();
+  public static int min = Integer.MAX_VALUE;
+  public static int max = Integer.MIN_VALUE;
 
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,21 +23,20 @@ public class Goorm_알파벳트리장난감 {
       }
     }
     DFS(tree, 0, getNum(tree.get(0)));
-    System.out.println(answer.stream().min(Integer::compareTo).get());
-    System.out.println(answer.stream().max(Integer::compareTo).get());
+    System.out.print(min + "\n" + max);
   }
 
   public static void DFS(List<Character> tree, int node, int sum) {
     int lt = 2 * node + 1;
     int rt = 2 * node + 2;
+    // 포화 이진트리이기 때문에, 자식 노드가 존재하지 않으면 (왼쪽 자식 노드만 확인하면 된다, 왼쪽 자식노드가 트리의 사이즈보다 크거나 같다면)
     if (lt >= tree.size()) {
-      answer.add(sum);
+      if (max < sum) max = sum;
+      if (min > sum) min = sum;
       return;
     }
-    int lv = getNum(tree.get(lt));
-    int rv = getNum(tree.get(rt));
-    DFS(tree, lt, sum + lv);
-    DFS(tree, rt, sum + rv);
+    DFS(tree, lt, sum + getNum(tree.get(lt)));
+    DFS(tree, rt, sum + getNum(tree.get(rt)));
   }
 
 
