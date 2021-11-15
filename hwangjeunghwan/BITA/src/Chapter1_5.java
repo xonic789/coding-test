@@ -17,64 +17,12 @@ class Chapter1_5 {
 		}
 		
 		dfsmax(alphabets, 0, n, 0, 0);
-		//dfsmin(alphabets, 0, n, 0);
 		dfsmin(alphabets, 0, n, 0, 0);
 		System.out.println(mincount);
 		System.out.println(maxcount);
 
 	}
 	
-/*	static void dfsmax(String[] alphabet, int len, int n, int currLocation) {
-		int max;
-		if(len == 0) {
-			maxcount += alphabetindex(alphabet[0].charAt(0));
-			dfsmax(alphabet, len+1, n, currLocation);
-		}
-		else {
-			if(len == n) {
-				return;
-			}
-			max = Math.max(alphabetindex(alphabet[len].charAt(currLocation)), alphabetindex(alphabet[len].charAt(currLocation+1)));
-			if(max == alphabetindex(alphabet[len].charAt(currLocation))){
-				maxcount += max;
-				dfsmax(alphabet, len+1, n, currLocation*2);
-			}
-			else if(max == alphabetindex(alphabet[len].charAt(currLocation+1))) {
-				maxcount += max;
-				dfsmax(alphabet, len+1, n, (currLocation+1)*2);
-			}
-
-		
-		}
-		
-		
-	}*/
-/*	static void dfsmin(String[] alphabet, int len, int n, int currLocation) {
-		int min;
-		if(len == 0) {
-			mincount += alphabetindex(alphabet[0].charAt(0));
-			dfsmin(alphabet, len+1, n, currLocation);
-		}
-		else {
-			if(len == n) {
-				return;
-			}
-			min = Math.min(alphabetindex(alphabet[len].charAt(currLocation)), alphabetindex(alphabet[len].charAt(currLocation+1)));
-			
-			
-			if(min == alphabetindex(alphabet[len].charAt(currLocation))){
-				mincount += min;
-				dfsmin(alphabet, len+1, n, currLocation*2);
-			}
-			else if(min == alphabetindex(alphabet[len].charAt(currLocation+1))) {
-				mincount += min;
-				dfsmin(alphabet, len+1, n, (currLocation+1)*2);
-			}
-			
-		}
-		
-		
-	}*/
 	static void dfsmax(String[] alphabet, int len, int n, int currLocation, int maxn) {
 		int left;
 		int right;
