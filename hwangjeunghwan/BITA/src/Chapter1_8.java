@@ -55,12 +55,7 @@ public class Chapter1_8 {
  			}
 		}
 			bfs(wonjunX, wonjunY);
-	//	bfs(wonjunX, wonjunY, fireX, fireY);
-		
 		System.out.println(count);
-		
-		
-		
 		
 	}
 	
