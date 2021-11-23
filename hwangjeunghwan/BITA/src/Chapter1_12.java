@@ -50,9 +50,9 @@ public class Chapter1_12 {
 			for(int j=0; j<n; j++) {
 				
 				dp[i][j] = Math.max(dp[i-1][j]+triangle[n-i-1][j], dp[i-1][j+1]+triangle[n-i-1][j]);
-				System.out.print(dp[i][j]);
+			
 				}
-			System.out.println();
+		
 		}
 		
 		
