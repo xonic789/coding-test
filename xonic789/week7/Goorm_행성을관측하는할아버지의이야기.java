@@ -10,7 +10,6 @@ import java.util.StringTokenizer;
 public class Goorm_행성을관측하는할아버지의이야기 {
 
   private static int[][] graph;
-  private static int[][] answer;
   private static boolean[] check;
   private static int smallCount;
   private static int largeCount;
