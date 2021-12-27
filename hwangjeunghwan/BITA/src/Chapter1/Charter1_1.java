@@ -1,6 +1,7 @@
+package Chapter1;
 import java.util.*;
 
-class 巨公货部部 {
+class Charter1_1 {
 	public static void main(String[] args)  {
 		Scanner sc = new Scanner(System.in);
 		

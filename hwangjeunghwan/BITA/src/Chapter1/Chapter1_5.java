@@ -1,3 +1,4 @@
+package Chapter1;
 import java.io.*;
 class Chapter1_5 {
 	static char[] alphabets = {'a','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
