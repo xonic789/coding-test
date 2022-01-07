@@ -10,19 +10,32 @@ public class PRO_49994_방문길이 {
     int nx;
     int ny;
 
-    Location(int x, int y) {
+    Location(int x, int y, int nx, int ny) {
       this.x = x;
       this.y = y;
+      this.nx = nx;
+      this.ny = ny;
     }
 
+    @Override
+    public boolean equals(Object o) {
+      if (this == o) return true;
+      if (o == null || getClass() != o.getClass()) return false;
+      Location location = (Location) o;
+      return (x == location.x && y == location.y && nx == location.nx && ny == location.ny) || (x == location.nx && y == location.ny && ny == location.y && nx == location.x);
+    }
 
+    @Override
+    public int hashCode() {
+      return Objects.hash(x, y, nx, ny);
+    }
   }
 
 
   public int solution(String dirs) {
     int answer = 0;
-    Location location = new Location(5, 5);
-    Set<Location> list = new HashSet<>();
+    Location location = new Location(5, 5, 0, 0);
+    List<Location> list = new ArrayList<>();
     int N = dirs.length();
     for (int i = 0; i < N; i++) {
       int nx = 0;
@@ -47,23 +60,17 @@ public class PRO_49994_방문길이 {
       }
       if (nx >= 11 || nx < 0 || ny >= 11 || ny < 0) continue;
       // x, y를 찾으면 된다. nx ny로
-      Location loc = new Location(location.x, location.y);
-      loc.nx = nx;
-      loc.ny = ny;
-      boolean boo = false;
-      for (Location l : list) {
-        if ((l.x == loc.nx && l.y == loc.ny && l.nx == loc.x && l.ny == loc.y) ||
-                (l.nx == loc.nx && l.ny == loc.ny && l.x == loc.x && l.y == loc.y) ) {
-          boo = true;
-          break;
-        }
+      Location loc = new Location(location.x, location.y, nx, ny);
+      boolean isEquals = false;
+      for (Location tmp : list) {
+        if (tmp.equals(loc)) isEquals = true;
       }
-      if (!boo) list.add(loc);
+      if (!isEquals) list.add(loc);
       location.x = nx;
       location.y = ny;
     }
 
-    return list.size();
+    return set.size();
   }
 
 
