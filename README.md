@@ -6,10 +6,6 @@
 >5. [**파일 컨벤션**](#파일-컨벤션)
 >6. [**진행 방법**](#진행-방법)
 >7. [**커밋 컨벤션**](#커밋-컨벤션)
->8. [**주차별 문제 풀이 링크**](#주차별-문제-풀이-링크)
->       - [1주차](#1주차)
->       - [2주차](#2주차)
->       - [3주차](#3주차)
 > 
 ## 스터디 목적
 - 코딩 테스트를 위한 꾸준한 문제 풀이
@@ -17,15 +13,13 @@
 - 쿠버네티스 과정내 **코딩테스트 고득점 획득** 및 **기업 코딩테스트 최저 솔** 기준을 목표로 한다.
 
 ## 스터디 팀원
-- [heyhmin](https://github.com/heyhmin) : `C++`
 - [hwangjeunghwan](https://github.com/hwangjeunghwan) : `JAVA`
-- [JJY2021](https://github.com/JJY2021) : `C, C++`
 - [normal-beom](https://github.com/normal-beom) : `Python`
 - [xonic789](https://github.com/xonic789) : `JAVA`
 
 ## 스터디 방법
 - 매주 화요일(수요일)까지 레포지토리로 PR을 날린다.
-- 쿠버네티스 코딩테스트 강좌를 통해 문제 풀이.
+- 현재까지는 지속적으로 풀고싶은 문제 풀이 예정.
 - ~~매주 화요일마다 각자 한 문제씩 골라 링크를 카카오 워크에 남긴다.~~
 - ~~선착순으로 **3문제까지 끊어 풀고** 나머지 **2문제는 선택 문제**이며, 풀어도 되고 풀지 않아도 된다.~~
     - ~~백준, 프로그래머스 매주 번갈아 가며 풀며 백준은 문제집 (단기간 성장 문제 좋은거 같아요), 프로그래머스는 단계별 문제를 추린다.~~
@@ -45,7 +39,7 @@
 ![image](https://user-images.githubusercontent.com/64122884/140010279-df9d85b5-ed7a-4982-a45c-aef364a471ed.png)
 ![image](https://user-images.githubusercontent.com/64122884/140010299-b9f19598-2842-4dc2-8420-15b7a71ff4f4.png)
 - 백준의 경우 `BOJ_{문제번호}_{문제제목}`
-- 프로그래머스의 경우 `PRO_{문제번호}_{문제제목}`
+- 프로그래머스의 경우 `PRO_{문제제목}`
 - 예) Goorm_앵무새꼬꼬
 - 예)
 - 
@@ -60,19 +54,8 @@
 - 커밋 subject : `github nickname !: 문제 이름` 
   - 예) `xonic789 !: BOJ 12865번 평범한 배낭`
   - 에) `xonic789 !: Goorm 앵무새 꼬꼬`
+- 리팩토링의 경우
+  - 예) `xonic789 !: refactor BOJ 12865번 평범한 배낭`
 - 커밋 description : 간단한 풀이
-  - 예) 해당 문제는 알고리즘을 쓰지 않고 구현.
+  - 예) 해당 문제는 익히 알려진 알고리즘을 쓰지 않고 구현.
   - 예) BFS 사용하여 구현
-
-## 주차별 문제 풀이 링크
-### 1주차
-1. [평범한 배낭](https://www.acmicpc.net/problem/12865) 
-2. [가운데를 말해요](https://www.acmicpc.net/problem/1655) 
-3. [백조의 호수](https://www.acmicpc.net/problem/3197) 
-4. [이항 계수 3](https://www.acmicpc.net/problem/11401) 선택 문제
-5. [행렬 제곱](https://www.acmicpc.net/problem/10830) 선택 문제
-
-구름 코딩테스트 강좌를 통한 문제 풀이 ! 
-
-### 2주차
-### 3주차
